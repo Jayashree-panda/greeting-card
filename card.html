@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GREETING CARD</title>
+	<style>
+		.flip-container{
+				height:200px;
+				width:240px;
+				margin:10px;
+				float:left;
+		}
+		.flip-container > .front{	
+			background-color: 	#00FFFF;
+			height:400px;
+			width:440px;
+			border-radius: 7px;
+			transform: perspective(600px) rotateY(0deg);
+			transition:transform .5s linear 0s;
+			backface-visibility: hidden;
+			display: block;
+		}
+		.flip-container > .back{	
+			background-color:#00FFFF;
+			height:400px;
+			width:440 px;
+			border-radius: 7px;
+			transform: perspective(600px) rotateY(180deg);
+			transition:transform .5s linear 0s;
+			backface-visibility: hidden;
+			display: block;
+		}
+		.flip-container:hover > .front{
+			transform: perspective(600px) rotateY(-180deg);
+		}
+		.flip-container:hover > .back{
+			transform: perspective(600px) rotateY(0deg);
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class="flip-container">
+		<div class="front">
+			<p style="color:red;font-size:200%;text-align:center;font-family:Times">MOTHER</p>
+		</div>
+		<div class="back">
+			<img src="mom.jpg" style="height:100%;width:100%">
+		</div>
+	</div>
+	
+
+
+
+</body>
+</html>
